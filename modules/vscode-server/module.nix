@@ -60,7 +60,7 @@ moduleConfig: {
   in
     mkIf cfg.enable (mkMerge [
       {
-        services.vscode-server.nodejsPackage = mkIf cfg.enableFHS (mkDefault pkgs.nodejs-16_x);
+        services.vscode-server.nodejsPackage = mkIf cfg.enableFHS (mkDefault pkgs.nodejs-18_x);
       }
       (moduleConfig {
         name = "auto-fix-vscode-server";
